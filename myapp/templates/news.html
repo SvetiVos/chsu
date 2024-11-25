@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Хор Череповецкого государственного университета</title>
+	<link rel="stylesheet" href="{% static 'css/index.css' %}">
+	<link rel="stylesheet" href="{% static 'css/footer.css' %}">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<script type="text/javascript">
+	$(function() {
+		$(window).scroll(function() {
+			if($(this).scrollTop() != 0) {
+				$('#button').fadeIn();
+			} else {
+				$('#button').fadeOut();
+			}
+		});
+		$('#button').click(function() {
+			$('body,html').animate({scrollTop:0}, 800);
+		});
+	});
+	</script>
+
+	<script type="text/javascript">
+	$(document).ready(function(){
+		$(window).scroll(function(){
+			if ($(this).scrollTop() >= 0) {
+				$('.button').fadeIn();
+			} else {
+				$('.button').fadeOut();
+			}
+		});
+		$('.button').click(function(){
+			var height=$("body").height();
+			$("html, body").animate({ scrollTop: height }, 1000);
+			return false;
+		});
+	});
+	</script>
+</head>
+<body>
+	<header>
+		<div class="container">
+			<div class="heading clearfix">
+				<img src="{% static 'images/4.png' %}" width="90">
+				<nav>
+					<ul class="mmenuu">
+					    <li>
+					    	<a href="index.html">О нас</a>
+					    </li>
+					    <li>
+					    	<a href="news.html">Новости</a>
+					    </li>
+					    <li>
+					    	<a href="soloists.html">Солисты</a>
+					    </li>
+					    <li>
+					    	<a href="foto.html">Фото</a>
+					    </li>
+					    <li>
+					    	<a href="video.html">Видео</a>
+					    </li>
+					    <li>
+					    	<a href="contact.html">Контакты</a>
+					    </li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</header>
+
+	<section id="our">
+		<div class="container">
+			<div class="title">
+                                <hr width="100%" height = 10px; color=#C43BD0 size="5" >
+				<h2>
+					Новости
+				</h2>
+                                <hr width="100%" height = 100px; color=#C43BD0 size="5">
+
+				<style>
+					#vk_post_container {
+						width: 800px;
+						transform: scale(1);
+						transform-origin: top center;
+<!--
+					}
+					#vk_post_container1 {
+						width: 900px;
+						transform: scale(0.8);
+						transform-origin: top center;
+					}
+				</style>
+
+				<br>
+				<div id="vk_post_container" style="display: flex; justify-content: space-between;">
+					<div id="vk_post_-27561449_36322" style="flex: 3.27; margin-left: 90px; margin-right: 60px;"></div>
+					<div id="vk_post_-215898947_958" style="flex: 3.55; margin-right: 0px;"></div>
+				</div>
+				<script type="text/javascript" src="https://vk.com/js/api/openapi.js?173"></script>
+				<script type="text/javascript">
+				  (function() {
+					VK.Widgets.Post("vk_post_-27561449_36322", -27561449, 36322, 'dNmgEfOd848VsTI6ihuwpDTlNUo_');
+				  }());
+				</script>
+				<script type="text/javascript" src="https://vk.com/js/api/openapi.js?173"></script>
+				<script type="text/javascript">
+				  (function() {
+					VK.Widgets.Post("vk_post_-215898947_958", -215898947, 958, 'NbUCz5BplXg4K3hKyXk8w5fHeqwK');
+				  }());
+				</script>
+<!--              <div id="vk_post_container1">-->
+<!--					<div id="vk_post_-215898947_958"></div>-->
+<!--				</div>-->
+<!--				<script type="text/javascript" src="https://vk.com/js/api/openapi.js?173"></script>-->
+<!--				<script type="text/javascript">-->
+<!--				  (function() {-->
+<!--					VK.Widgets.Post("vk_post_-215898947_958", -215898947, 958, 'NbUCz5BplXg4K3hKyXk8w5fHeqwK');-->
+<!--				  }());-->
+<!--				</script>-->
+
+				<br>
+				<br>
+
+			</div>
+			<div class="block clearfix">
+			<div class="br">
+				<a href="soloists.html">
+                                   Далее
+				</a>
+			</div>
+			<div>
+			<div class="otst"></div>
+			</div>
+		</div>
+	</section>
+
+	<div id = "button">
+        <img src="{% static 'images/6.png' %}" width="80">
+	</div>
+
+</body>
+</html>

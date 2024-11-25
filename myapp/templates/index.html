@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Хор Череповецкого государственного университета</title>
+	<link rel="stylesheet" href="{% static 'css/index.css' %}">
+	<link rel="stylesheet" href="{% static 'css/footer.css' %}">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<script type="text/javascript">
+	$(function() {
+		$(window).scroll(function() {
+			if($(this).scrollTop() != 0) {
+				$('#button').fadeIn();
+			} else {
+				$('#button').fadeOut();
+			}
+		});
+		$('#button').click(function() {
+			$('body,html').animate({scrollTop:0}, 800);
+		});
+	});
+	</script>
+
+	<script type="text/javascript">
+	$(document).ready(function(){
+		$(window).scroll(function(){
+			if ($(this).scrollTop() >= 0) {
+				$('.button').fadeIn();
+			} else {
+				$('.button').fadeOut();
+			}
+		});
+		$('.button').click(function(){
+			var height=$("body").height();
+			$("html, body").animate({ scrollTop: height }, 1000);
+			return false;
+		});
+	});
+	</script>
+</head>
+<body>
+	<header>
+		<div class="container">
+			<div class="heading clearfix">
+				<img src="{% static 'images/4.png' %}" width="90">
+				<nav>
+					<ul class="mmenuu">
+					    <li>
+					    	<a href="index.html">О нас</a>
+					    </li>
+					    <li>
+					    	<a href="news.html">Новости</a>
+					    </li>
+					    <li>
+					    	<a href="soloists.html">Солисты</a>
+					    </li>
+					    <li>
+					    	<a href="foto.html">Фото</a>
+					    </li>
+					    <li>
+					    	<a href="video.html">Видео</a>
+					    </li>
+					    <li>
+					    	<a href="contact.html">Контакты</a>
+					    </li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</header>
+
+	<section id="our">
+		<div class="container">
+			<div class="title">
+                                <hr width="100%" height = 10px; color=#C43BD0 size="5" >
+				<h2>
+					О нас
+				</h2>
+                                <hr width="100%" height = 100px; color=#C43BD0 size="5">
+				<blockquote class="quote">
+                                <p>
+									В сердце города, где живут знания и мечты, рождается музыка – чистая, сильная, вдохновенная. Хор Череповецкого государственного университета – это живой голос университета, отражающий его динамику, страсть и жажду жизни.
+								</p>
+								<p>
+									Музыка, рожденная в стенах университета, заполняет концертные залы, звучит на международных фестивалях, неся с собой тепло, радость и свет.
+                                </p>
+
+				</blockquote>
+				<table width="82%" cellpadding="0pt"  align="center">
+				<tr>
+					<td align="center"> <img src = "{% static 'images/3.jpeg' %}" width="650pt" class="scale"/> </td>
+				</tr>
+				</table>
+				<p align="justify">
+					Хор – это не просто коллектив, это единый организм, где каждый голос сливается в мощный, гармоничный ансамбль. Это команда, которая умеет вдохновлять и создавать прекрасное, это содружество, объединенное любовью к музыке и стремлением к совершенству.
+				</p>
+				<p align="justify">
+					Хор Череповецкого государственного университета - это живой символ творческой энергии, оживляющей университет и дарящей радость городу.
+				</p>
+			<div class="otst"></div>
+			</div>
+			<div class="block clearfix">
+			<div class="br">
+				<a href="news.html">
+                                   Далее
+				</a>
+			</div>
+			<div>
+			<div class="otst"></div>
+			</div>
+		</div>
+	</section>
+
+	<div id = "button">
+        <img src="{% static 'images/6.png' %}" width="80">
+	</div>
+
+</body>
+</html>

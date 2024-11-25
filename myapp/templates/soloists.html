@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Хор Череповецкого государственного университета</title>
+	<link rel="stylesheet" href="{% static 'css/soloists.css' %}">
+	<link rel="stylesheet" href="{% static 'css/footer.css' %}">
+	<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+	<script type="text/javascript">
+	$(function() {
+		$(window).scroll(function() {
+			if($(this).scrollTop() != 0) {
+				$('#button').fadeIn();
+			} else {
+				$('#button').fadeOut();
+			}
+		});
+		$('#button').click(function() {
+			$('body,html').animate({scrollTop:0}, 800);
+		});
+	});
+	</script>
+
+	<script type="text/javascript">
+	$(document).ready(function(){
+		$(window).scroll(function(){
+			if ($(this).scrollTop() >= 0) {
+				$('.button').fadeIn();
+			} else {
+				$('.button').fadeOut();
+			}
+		});
+		$('.button').click(function(){
+			var height=$("body").height();
+			$("html, body").animate({ scrollTop: height }, 1000);
+			return false;
+		});
+	});
+	</script>
+</head>
+<body>
+	<header>
+		<div class="container">
+			<div class="heading clearfix">
+				<img src="{% static 'images/4.png' %}" width="90">
+				<nav>
+					<ul class="mmenuu">
+					    <li>
+					    	<a href="index.html">О нас</a>
+					    </li>
+					    <li>
+					    	<a href="news.html">Новости</a>
+					    </li>
+					    <li>
+					    	<a href="soloists.html">Солисты</a>
+					    </li>
+					    <li>
+					    	<a href="foto.html">Фото</a>
+					    </li>
+					    <li>
+					    	<a href="video.html">Видео</a>
+					    </li>
+					    <li>
+					    	<a href="contact.html">Контакты</a>
+					    </li>
+					</ul>
+				</nav>
+			</div>
+		</div>
+	</header>
+
+	<section id="our">
+		<div class="container">
+			<div class="title">
+                                <hr width="100%" height = 10px; color=#C43BD0 size="5" >
+				<h2>
+					Наши солисты
+				</h2>
+                                <hr width="100%" height = 100px; color=#C43BD0 size="5">
+			<br>
+			<br>
+			<br>
+            <div class="soloist-grid">
+                <div class="soloist-item">
+                    <div class="image-container">
+						<img src="{% static 'images/8.jpeg' %}">
+                    </div>
+                    <div class="info">
+                        <h3>Крушевская Кристина Евгеньевна</h3>
+                        <p>Студентка ЧГУ</p>
+                    </div>
+                </div>
+                <div class="soloist-item">
+                    <div class="image-container">
+                        <img src="{% static 'images/16.jpg' %}">
+                    </div>
+                    <div class="info">
+                        <h3>Лукина Светлана Гурьевна</h3>
+                        <p>Ведущий специалист по учебно-методической работе ЧГУ</p>
+                    </div>
+                </div>
+                <div class="soloist-item">
+                    <div class="image-container">
+                        <img src="{% static 'images/17.jpg' %}">
+                    </div>
+                    <div class="info">
+                        <h3>Косаренкова Маргарита Михайловна</h3>
+                        <p>Преподаватель ЧГУ</p>
+                    </div>
+                </div>
+            </div>
+
+
+			<div class="otst"></div>
+			</div>
+			<div class="block clearfix">
+			<div class="br">
+				<a href="foto.html">
+                                   Далее
+                                </a>
+			</div>
+			<div>
+			<div class="otst"></div>
+			</div>
+		</div>
+
+	</section>
+
+	<div id = "button">
+        <img src="{% static 'images/6.png' %}" width="80">
+	</div>
+
+</body>
+</html>
